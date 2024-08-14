@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+
+  <body class="container">
+    <header>
+      <div>
+        <h1>GUESS THE NUMBER</h1>
+      </div>
+    </header>
+    <main>
+      <div id="initialElements">
+        <p class="explication">
+          The application will generate a random number, and your task is to
+          find it in as few attempts as possible.
+        </p>
+        <button class="btn" id="gameStart">Let's go</button>
+      </div>
+
+      <div id="gameElements">
+        <h2>I generated a number between 0 and 500, try to find it!</h2>
+        <p class="attempt" id="attemptsDisplay">Attempt:</p>
+        <div class="game">
+          <div class="input-group">
+            <label class="input-group__label" for="number">Your guess</label>
+            <input
+              type="text"
+              id="number"
+              class="input-group__input"
+              required
+              placeholder="Enter your guessing number"
+            />
+            <button class="btn" id="submitButton">Start</button>
+          </div>
+        </div>
+
+        <div id="wrongAttempts" class="wrong-attempts">
+          <p id="messageDisplay"></p>
+          <p id="previousWrongAttempts">Previous wrong attempts :</p>
+          <div class="columns">
+            <div class="column">
+              <p>Too small:</p>
+              <ul id="tooSmallColumn"></ul>
+            </div>
+            <div class="column">
+              <p>Too big:</p>
+              <ul id="tooLargeColumn"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="success-box">
+        <div class="face">
+          <div class="eye"></div>
+          <div class="eye right"></div>
+          <div class="mouth happy"></div>
+        </div>
+        <div class="shadow scale"></div>
+        <div class="message">
+          <h3 class="alert">Success!</h3>
+          <p id="messageVictory"></p>
+        </div>
+        <button class="button-box" id="restartGame">
+          <h3 class="btn-restart">Restart</h3>
+        </button>
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
